@@ -48,40 +48,6 @@ hostname = mp.weixin.qq.com, api.gamer.com.tw, ios.prod.ftl.netflix.com, homepag
 # TextEditor       buy.itunes.apple.com
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
 
-#波点音乐mv屏蔽
-^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/musicResource\/.+ url reject
-^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4 url reject
-^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid url reject
-^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid url reject
-
-# www.babybooks.top,vip.0818km.cn,vni.kwaiying.com
-#汉堡儿童睡前故事
-^https:\/\/www\.babybooks\.top\/v0\/profile url script-response-body https://gjds.vip/QX/pojie/sqgs.js
-#二蛋影视
-^http:\/\/vip\.0818km\.cn\/login\/login\/veifys\.html.+ url script-response-body https://gjds.vip/QX/pojie/egdd.js
-#bigshot
-^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile url script-response-body https://gjds.vip/QX/pojie/bigshot.js
-
-# 随手记.     api.feidee.net, userapi.feidee.net, tg.feidee.com, community.feidee.com
-# 注：解锁付费皮肤
-^https?:\/\/((user)?api|community)\.feidee\.(net|com)\/(v\d\/(pay/vip|profile/basic_info|app_themes/types)|transfer\/gapi\/accurat\/v\d\/tasks) url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SuiShouJi.js
-^https?:\/\/api\.feidee\.net\/v\d\/app_themes\/\d+\/download url script-echo-response https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SuiShouJi.js
-^https?:\/\/tg\.feidee\.com\/online_ad\/ url reject
-
-# 马卡龙玩图   app.api.versa-ai.com
-^https?:\/\/app\.api\.versa-ai\.com\/pay\/order\/iap\/check url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/MaKaLongWanTu.js
-
-# NOMO CAM 解锁订阅  nomo.dafork.com
-^https?:\/\/nomo\.dafork\.com\/api\/v3\/register\/phone_signin$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/NoMoCamProCrack.js
-
-# 微信读书   i.weread.qq.com, 101*.*.*, 116.*.*.*, 140.*.*.*, 183.*.*.*, 203*.*.*
-# 使用方法：不支持最新版本，仅支持5.5.1版本； 会员页面无法打开，请关闭去广告规则
-# ^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/WeRead.js
-
-# 流利说·阅读   vira.llsapp.com
-# 使用方法：会员时长到2030年，破解的标志是打开阅读️限制，不会提示会员才能看️️️，如果没有显示会员，剩余天数999。必须卸载重装！
-^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$  url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
-
 # 鱿鱼视频解锁会员    api.youyu*
 # 使用方法：1.退出登陆 2.开启QX脚本 3.重新登陆账号
 ^https?:\/\/api\.youyu.*\/api\/account\/loginBy(Phone|Password)$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/YYSPCrack.js
@@ -110,11 +76,6 @@ hostname = mp.weixin.qq.com, api.gamer.com.tw, ios.prod.ftl.netflix.com, homepag
 
 #百度网盘解锁vip，视频倍速播放     pan.baidu.com
 https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/BaiduCloud.js
-
-
-
-#解锁悟饭游戏厅  iosv2.cjapi.papa21.com
-^http:\/\/iosv2\.cjapi\.papa21\.com\/user\/ios_store_pay_edition\/members_login\/check_members_identity_v2 url script-response-body https://raw.githubusercontent.com/byour13/Script/main/wukongplay.js
 
 #微信屏蔽跳转
 #在微信中打开淘宝等被屏蔽链接，点击 Surge/QuantumultX 通知跳转到 Safari 或淘宝 App
@@ -600,46 +561,6 @@ https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body h
 ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* url script-response-body https://qxnav.com/rules/QuantumultX/js/yue/Textnow.js
 
 
-##大雄脚本组
-
-# 驾校一点通 (by @superuv)
-^https:\/\/vipapi\.jxedt\.com\/vip\/check url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/jxydt.js
-
-#彩云（解锁VIP）   biz.caiyunapp.com
-^https:\/\/biz\.caiyunapp\.com\/v2\/user.+ url script-response-body https://gjds.vip/QX/pojie/cytq.js
-
-#Picsew（解锁付费订阅）  & buy.itunes.apple.com
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://gjds.vip/QX/pojie/Picsew.js
-
-#Bear熊掌记  内购解锁
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js
-
-#Pocket list (by @superuv)
-^https:\/\/pocketlists\.com\/api\/v1\/pocketlists.me.get url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pock.js
-
-#海豚记账 (by @superuv)
-https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/HTJZ.js
-
-#幕布 (by @superuv)
-https:\/\/mubu\.com\/api\/app\/user\/info url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mb.js
-
-#智能证件照相机 (by @superuv)
-^https:\/\/app\.xunjiepdf\.com\/api\/v4\/virtualactregister url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/znzj.js
-
-#猫咪翻译(by @superuv)
-http:\/\/miaow\.yiyongcad\.com\/api\/v4\/memprofile url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mmfy.js
-
-#微商助手(by @superuv)
-https:\/\/api\.lennou\.com\/user\/info url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/wszs.js
-
-#gk扫描仪(by @superuv)
-^https:\/\/api\.gkocr\.com\/api\/userlogin1.php url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/smy.js
-
-#流利说.阅读 (by@火羽&@singee)
-^https?:\/\/vira\.llsapp\.com\/api\/v2\/readings\/(accessible|limitation) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/llyd.js
-
-#abaenglish (未测试)
-^https:\/\/api\.revenuecat\.com\/v1\/(receipts|\d{1,})$ url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/abaenglish.vip.js
 
 #轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
 https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js
@@ -668,18 +589,6 @@ https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVe
 #iOS 2.1.2.1 屏蔽 2.1.2.2 的更新提示
 ^https:\/\/api\.wakamoment\.ga\/init\?platform\=ios url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/blockBikaUpdate.js
 
-#崩坏3 跨服 (By @FlintyLemming)
-^http:\/\/(\d*\.\d*\.\d*\.\d*)\/query_gameserver\?version=3\.7\.0_gf_ios&t=(\d*)&uid=(\d*) url 302 http://$1/query_gameserver?version=3.7.0_gf_android&t=$2&uid=$3
-^https:\/\/global1\.bh3\.com\/query_dispatch\?version=3\.7\.0_gf_ios&t=(\d*) url 302  https://global1.bh3.com/query_dispatch?version=3.7.0_gf_android&t=$1 
-
-#第一弹 去广告+原画 (By Miao Miao)
-^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Diyidan.js
-# 修复下载视频清晰度
-(http://musicapi\.diyidan\.net/tv_series/video/download/\d+)/(1|2) url 302 $1/4
-
-#Fantastical 内购解锁 (By @sunshy)
-^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$ url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/fantastical.js
-
 #菜谱大全解锁vip (By @photonmang)
 https?:\/\/api\.jiaonizuocai\.com url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cpdq.js
 
@@ -698,36 +607,6 @@ https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Pro
 #洪恩双语绘本 (By 军哥哥)
 https:\/\/bookapi\.ihuman\.com\/(v1\/get\_user\_info|v1\/get\_purchase\_list) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hnsyhb.js
 
-#中国体育直播unlock (By 军哥哥)
-http:\/\/rest\.zhibo\.tv\/room\/get\-room\-info\-v430 url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/zgtyzb.js
-
-# 有道云笔记VIP (ByAlex0510)
-https://note.youdao.com/yws/(mapi/payment|api/self) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ydybj.js
-
-#Peak 解锁Pro
-^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me? url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/peak.js
-
-# IT之家 去新闻列表广告
-^https?:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js
-^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js
-
-# XMind思维导图 (by @JigsaWo)
-https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/XMind.js
-
-# 万里影视 （by LTribe）
-^http?:\/\/.*\.arten.cn/login/login url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Wanliyingshi.js
-
-# 奇热小说 解锁收费章节(By @@ios4521)
-^https://api.weiqire.com/api3/(visitor/|user/unlockCharpter) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qrxs.js
-
-# 石墨文档 (By Alex0510)
-https://api.shimo.im/users/ url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/shimo.js
-
-#VideoStar Unlock（by LTribe）
-^https?:\/\/.*\.videostarapp\.com\/scripts\/subsNew\.php url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/VideoStar.js
-
-# Pillow (By @CheeryTodo)
-https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pillow.js
 
 # 马卡龙 (By @CheeryTodo)
 https://app.api.versa-ai.com/pay/order/iap/check url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mkl.js
@@ -768,11 +647,3 @@ http://user.shywck.com/user/userinfo url script-response-body https://raw.github
 
 # 美颜相机一次性解锁内购（by黑黑酱）
 ^https:\/\/api\.meiyan\.com\/iap\/verify\.json url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/myxj.js
-
-# Fit健身会员 （by黑黑酱）
-^https:\/\/bea\.sportq\.com\/SFitWeb\/sfit\/getUserBaseInfo url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/fit.js
-
-# 什么值得买(By blackmatrix7)
-^https:\/\/homepage-api.smzdm.com\/home url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-^https:\/\/haojia-api.smzdm.com\/home\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-^https:\/\/article-api.smzdm.com\/article\/index_home_page url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
